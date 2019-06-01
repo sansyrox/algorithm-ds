@@ -9,6 +9,8 @@ int noOfPaths(int m, int n) {
         return 1;
     }
 
+    if()
+
     if(blocked[m-1][n]!=0){
         return noOfPaths(m,n-1);
     }
