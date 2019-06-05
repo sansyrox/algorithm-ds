@@ -5,19 +5,18 @@ using namespace std;
 #define mp make_pair
 #define pb push_back
 
-
-int main() {
-    int a;
-    cin>>a;
+int computeSetBits(int n){
     int ans=0;
-    while(a>0){
-        ans+=(a&1);
-        a=a>>1;
-
+    while(n){
+        ans++;
+        n=n&(n-1);
     }
 
-    cout<<ans<<endl;
-
-    return 0;
+    return ans;
 }
 
+
+int main() {
+    
+    return 0;
+}

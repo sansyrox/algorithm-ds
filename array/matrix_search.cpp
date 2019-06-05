@@ -4,37 +4,44 @@
 // First line consists of two space separated integers N and M, denoting the number of element in a row and column respectively. Second line of each test case consists of N*M space separated integers denoting the elements in the matrix in row major order. Third line of each test case contains a single integer x, the element to be searched.
 
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+
+int search(vector<vector<int> > a, int x, int n, int m){
+    int i=0; int j = m-1;
+
+    while(i<n and j<m and i>=0 and j>=0){
+        if(x>a[i][j]){
+            i++;
+        }
+        else if(x<a[i][j]){
+            j--;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
 int main() {
 
-    int t; cin>>t;
+    int t=1;
     while(t--) {
     int n,m;
     cin>>n>>m;
-    int arr[n][m];
+    vector<vector<int> > arr;
     for(int i=0; i<n; i++){
+        vector<int> temp;
         for(int j=0; j<m; j++) {
-            cin>>arr[i][j];
+            int t; cin>>t;
+            temp.push_back(t);
         }
+        arr.push_back(temp);
     }
     int k; cin>>k;
-
-    int i,j;
-
-    for( i=0; i<n; i++){
-        if(k<arr[i][0] || k>arr[i][m-1]) {
-            continue;
-        }
-        for( j=0; j<m; j++) {
-            if(k==arr[i][j]) {
-                cout<<1<<endl;break;
-            }
-        }
-    }
-
-    if(i==n and j== m) {
-        cout<<0<<endl;
-    }
+    cout<<search(arr,k,n,m)<<endl;
 
     }
 
