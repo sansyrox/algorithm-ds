@@ -13,14 +13,14 @@ void towerOfHanoi(int n, char src, char dest, char helper){
 
 
     towerOfHanoi(n-1, src,helper,dest);
-    cout<<"Move "<<n<<" disk from "<<src<<" to "<<dest<<endl;
+    cout<<"Moving ring "<<n<<" from "<<src<<" to "<<dest<<endl;
     towerOfHanoi(n-1,helper,dest,src);
-
-
 
 }
 
 int main() {
-    towerOfHanoi(3,'A','B','C');
+    int n;
+    cin>>n;
+    towerOfHanoi(n,'A','B','C');
     return 0;
 }
