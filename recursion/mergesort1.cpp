@@ -4,20 +4,20 @@ using namespace std;
 #define ll long long
 #define pb push_back
 
-ll N;
+// ll N;
 
-void merge( ll *A, ll s,ll mid, ll e){
-    ll c[N];
+void merge( int A[], int s,int mid, int e, int n){
+    int c[100];
 
 
-    ll i=s,j=mid+1;
-    ll k=s;
+    int i=s,j=mid+1;
+    int k=s;
     while(i<=mid and j<=e){
         if(A[i]<A[j]){
             c[k++] = A[i++];
+        } else {
+            c[k++] = A[j++];
         }
-        else c[k++] = A[j++];
-
     }
 
     while(i<=mid){
@@ -29,39 +29,41 @@ void merge( ll *A, ll s,ll mid, ll e){
     }
 
 
-    for(ll x=s; x<=e; x++){
+    for(int x=s; x<=e; x++){
         A[i]=c[i];
+        
     }
 
 }
 
-void mergeSort(ll A[], ll s, ll e){
-    ll mid = (s+e)/2;
+void mergeSort(int A[], int s, int e, int n){
+    
     if(s>=e){
         return;
     }
 
-    mergeSort(A,s,mid);
-    mergeSort(A,mid+1,e);
+    int mid = (s+e)/2;
+    mergeSort(A,s,mid,n);
+    mergeSort(A,mid+1,e,n);
 
-    merge(A,s,mid,e);
+    merge(A,s,mid,e,n);
 
 
 }
 
 int main(){
     
-    
+    int N;
     cin>>N;
-    ll A[N];
+    int A[N];
 
-    for(ll i=0 ;i <N; i++){
+    for(int i=0 ;i <N; i++){
         cin>>A[i];
     }
 
     
 
-    mergeSort(A,0,N-1);
+    mergeSort(A,0,N-1,N);
 
     for(int i=0 ;i<N; i++){
         cout<<A[i]<<" ";

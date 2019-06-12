@@ -7,8 +7,8 @@ using namespace std;
 
 void merge(int arr[],int s,int mid,int e) {
     int i=s,j=mid+1;
-    int temp[100];
-    int k =s;
+    int temp[e+1];
+    int k =0;
 
     while(i<=mid and j<=e){
         if(arr[i]<arr[j]){
@@ -26,8 +26,8 @@ void merge(int arr[],int s,int mid,int e) {
         temp[k++] = arr[j++];
     }
 
-    for(int i=s; i<=e; i++){
-        arr[i] = temp[i];
+    for(int i=s,j=0; i<=e; i++,j++){
+        arr[i] = temp[j];
     }
 
 
@@ -46,8 +46,12 @@ void mergeSort(int arr[], int s,int e){
 }
 
 int main() {
-    int arr[5]={1,3,2,4,5};
-    mergeSort(arr,0,4);
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++) cin>>arr[i];
+
+    mergeSort(arr,0,n-1);
     for(auto i:arr) cout<<i<<" ";
     return 0;
 }

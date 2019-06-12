@@ -44,10 +44,10 @@ int main() {
     }
 
     if(!balanced or !x.empty()){
-        cout<<"Not balanced\n";
+        cout<<"No";
     }
     else {
-        cout<<"balanced\n";
+        cout<<"Yes";
     }
 
 

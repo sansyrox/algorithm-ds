@@ -5,36 +5,39 @@ using namespace std;
 #define mp make_pair
 #define pb push_back
 
-bool isValid(int arr[], int n, int k, int ans){
-    int count =1; // count of painters
-    int sum=0;
-    for(int i=0; i<n; i++){
-        if(sum+arr[i]>=ans){
-            count++;
-        }
+const int mno = 10000003;
 
-        if(count>k){
-            return false;
-        }
+bool isValid(ll arr[], ll n, ll k, ll ans){
+    ll count =1; // count of painters
+    ll sum=0;
+    for(int i=0; i<n; i++){
         sum+=arr[i];
+        if(sum>ans){
+            count++;
+            sum=arr[i];
+        }
+        
     }
 
+    if(count>k){
+        return false;
+    }
     return true;
 
 }
 
-int minTime(int arr[], int n, int k) {
-    int s=arr[n-1];
-    int e=0;
-    for(int i=0;i<n; i++){
+ll minTime(ll arr[], ll n, ll k) {
+    ll s=arr[n-1];
+    ll e=0;
+    for(ll i=0;i<n; i++){
         e+=arr[i];
     }
 
-    int ans;
+    ll ans;
     while(s<=e){
-        int mid=(s+e)/2;
+        ll mid=(s+e)/2;
         if(isValid(arr, n, k, mid)){
-            e = mid -1;
+            e = mid-1;
             ans = mid;
         }
         else {
@@ -46,14 +49,16 @@ int minTime(int arr[], int n, int k) {
 }
 
 int main() {
-    int n,k;
-    cin>>k>>n;
-    int arr[n];
-    for(int i=0; i<n; i++) {
+    ll n,k,t;
+    cin>>n>>k>>t;
+    ll arr[n];
+    
+    for(ll i=0; i<n; i++) {
         cin>>arr[i];
     }
 
-    cout<<minTime(arr,n,k);
+    sort(arr,arr+n);
+    cout<<(minTime(arr,n,k)%mno * t%mno)%mno;
 
     return 0;
 }
