@@ -32,7 +32,7 @@ int lcs3(string a,string b, string c, int i=0, int j=0, int k=0){
 }
 
 int lcs31(string a, string b, string c){
-    int n=a.size(),m=b.size(),o=c.size();
+    int n=a.length(),m=b.length(),o=c.length();
 
     int dp[n+1][m+1][o+1];
 
@@ -50,7 +50,7 @@ int lcs31(string a, string b, string c){
         for(int j=1; j<=m; j++){
             for(int k=1; k<=o; k++){
                 if(i==0 or j==0 or k==0) {dp[i][j][k] = 0; continue;}
-                if(a[i]==b[j] and b[j]==c[k]){
+                if(a[i-1]==b[j-1] and b[j-1]==c[k-1]){
                     dp[i][j][k] = 1 + dp[i-1][j-1][k-1];
                     continue;
                 }
@@ -74,10 +74,10 @@ int lcs31(string a, string b, string c){
 
 
 int main() {
-    int t; cin>>t;
+    int t=1;
     while(t--){
-    int x,y,z;
-    cin>>x>>y>>z;
+    // int x,y,z;
+    // cin>>x>>y>>z;
     string a,b,c;
     cin>>a>>b>>c;
     // memset(dp,-1,sizeof(dp));

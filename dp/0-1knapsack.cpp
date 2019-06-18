@@ -31,7 +31,7 @@ int maxKnapSackProfit(int cap, int n, int wt[], int val[]) {
     }
 
     return max (
-        val[n-1] + maxKnapSackProfit(cap - wt[n-1], n, wt, val),
+        val[n-1] + maxKnapSackProfit(cap - wt[n-1], n-1, wt, val),
         maxKnapSackProfit(cap, n-1, wt, val)
     );
 }
@@ -39,12 +39,14 @@ int maxKnapSackProfit(int cap, int n, int wt[], int val[]) {
 
 int main() {
 
-    int cap=4;
-    int n = 5;
-    int wt[] = {1,2,3,2,2};
-    int value[] = {8,4,0,5,3};
+    int n,s;
+    cin>>n>>s;
+    int wt[n],value[n];
+    for(int i=0; i<n; i++) cin>>wt[i];
+
+    for(int i=0; i<n; i++) cin>>value[i];
     
-    cout<<maxKnapSackProfit(cap,n,wt,value);
+    cout<<maxKnapSackProfit(s,n,wt,value);
 
 	return 0;
 }

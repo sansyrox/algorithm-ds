@@ -1,29 +1,44 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define mp make_pair
+#define pb push_back
 
-int minSteps(int n, int coins[], int len){
+int dp[1001];
 
-    if(n<=0) return 0;
-    int res = INF;
+int minCoins(int coins[],int n, int v){
     
-    for(int i=0; i<len; i++){
-        if(coins[i]<N){
-            int steps = 1 + minSteps(n-coins[i],coins,len);
-            if (sub_res < res)
-            res = sub_res;
+    if(v==0){
+        return 0;
+    }
+
+    if(dp[v]!=-1) return dp[v];
+
+    int ans=INT_MAX; 
+    for(int i=0; i<n; i++){
+        if(coins[i]<=v){
+            int subAns = minCoins(coins, n, v-coins[i]);
+            if(subAns!=INT_MAX){
+                ans = min(ans,subAns+1);
+            }
         }
-        
 
     }
 
-
-
+    return dp[v]=ans;
 }
 
-int main(){
-    int n=30;
-    int coins[]= {25,10,5};
 
-    cout<<minSteps(n,coins,3);
+int main() {
+    int t; cin>>t;
+    while(t--){
+        int v,n;
+        cin>>v>>n;
+        int coins[n];
+        memset(dp,-1,sizeof(dp));
+        for(int i=0; i<n; i++) cin>>coins[i];
+        cout<<minCoins(coins,n,v)<<endl;
+    }
     return 0;
 }

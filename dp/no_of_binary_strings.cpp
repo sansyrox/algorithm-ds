@@ -8,25 +8,26 @@
 #include<iostream>
 #include<vector>
 
+const long long me = 10e9 + 7;
+
 using namespace std;
 
-long long returnCount(int n){
-    long long a[n], b[n]; 
-    a[0] = b[0] = 1; 
-    for (int i = 1; i < n; i++) 
-    { 
-        a[i] = a[i-1] + b[i-1]; 
-        b[i] = a[i-1]; 
-    } 
-    return a[n-1] + b[n-1]; 
+long long dp[105]; 
+
+void returnCount(){
+    for (int i = 2; i <=104; i++) { 
+        dp[i] = (dp[i-1]%1000000007 + dp[i-2]%1000000007)%1000000007;
+    }
 }
 
 
 int main() {
     int t; cin>>t;
+    dp[0]=dp[1]=1;
+    returnCount();
     while(t--){
         int n; cin>>n;
-        cout<<returnCount(n)<<endl;
+        cout<<(dp[n+1])<<endl;
     }
 	return 0;
 }

@@ -11,7 +11,7 @@
 // Print the answer in a new lin
 
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 
@@ -24,7 +24,7 @@ ll lcs(ll a1[], ll a2[], int i, int j, int k){
 
     if(dp[i][j][k] != -1) return dp[i][j][k];
 
-    if(a1[i]==a2[j]) {
+    if(a1[i-1]==a2[j-1]) {
         return dp[i][j][k]=1+lcs(a1,a2,i-1,j-1,k);
     }
 
