@@ -26,6 +26,6 @@ int powerAB(int a, int b){
 }
 
 int main() {
-    
+    cout<<(powerAB(-1,1)%20);
     return 0;
 }

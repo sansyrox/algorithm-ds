@@ -21,16 +21,18 @@ using namespace std;
 
 int i=0;
 
-bool comp(int a, int b){
-    if(a<b){
+bool comp(pair<int,int> a, pair<int,int> b){
+    if(a.first>b.first and a.second>b.second ){
         i++;
         // cout<<a<<" "<<b<<endl;
     }
 
-    return a<b;
+    return a.first<b.first;
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int t; cin>>t;
     vector<int> a;
     while(t--){
@@ -40,7 +42,12 @@ int main() {
             int t; cin>>t;
             a.pb(t);
         }
-        sort(a.begin(), a.end(),comp);
+        vector<pair<int,int> >v;
+        for(int i=0; i<n; i++){
+            v.pb(mp(a[i],i));
+        }
+        // mergesort()
+        sort(v.begin(), v.end(),comp);
         cout<<i<<endl;
         a.clear();
     }
