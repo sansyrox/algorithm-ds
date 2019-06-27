@@ -219,7 +219,7 @@ Pair1 isHeightBalanced(Node* root){
     Pair1 p;
     p.height = 1 + max(isHeightBalanced(root->left).height,isHeightBalanced(root->right).height);
 
-    p.isBalanced = abs(isHeightBalanced(root->left).height-isHeightBalanced(root->right).height)<=1 ;
+    p.isBalanced = abs(isHeightBalanced(root->left).height-isHeightBalanced(root->right).height)<=1  and (isHeightBalanced(root->left).isBalanced and isHeightBalanced(root->right).isBalanced) ;
 
     return p;
 

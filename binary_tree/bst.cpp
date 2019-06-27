@@ -88,7 +88,6 @@ class LinkedList{
 LinkedList flattenALinkedList(Node* root){
     LinkedList l;
     if(root==NULL){
-        
         l.head=l.tail=NULL;
         return l;
     }
