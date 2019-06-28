@@ -29,8 +29,8 @@ int main(){
     int t; cin>>t;
 
     while(t--){
-        int a,b;
-        cin>>a>>b;
+        // int a,b;
+        // cin>>a>>b;
         string s1,s2;
         cin>>s1>>s2;
         memset(dp,-1,sizeof(dp));
