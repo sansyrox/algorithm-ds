@@ -8,8 +8,8 @@ using namespace std;
 template <typename T>
 class Graph{
     map <T, list< pair<T, int> > > adjList;
-    vector< vector<int>> A(10,vector<int>(8,-1)) ;
-    vector<int> B(4,INT_MAX);
+    // vector< vector<int>> A(10,vector<int>(8,-1)) ;
+    // vector<int> B(4,INT_MAX);
 public:
 
     void addEdge(T u, T v, int dist, bool bidir=true){
