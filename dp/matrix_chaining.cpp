@@ -16,7 +16,7 @@ int matrixMultiplication(int arr[], int i, int j){
         return dp[i][j];
     }
 
-    int ans = 0;
+    int ans = INT_MAX;
     for(int k=i; k<=j; k++){
         int subAns = matrixMultiplication(arr,i,k) + matrixMultiplication(arr,k+1,j) + arr[i-1]*arr[k]*arr[j];
         ans = min(ans,subAns);
