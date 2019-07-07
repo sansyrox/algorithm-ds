@@ -5,30 +5,27 @@ using namespace std;
 #define mp make_pair
 #define pb push_back
 
-int dp[1000] = {0};
+int dp[1001] = {0};
 
-int catalan(int n){
-
-    if(n<0) return 0;
-    if(n==0){
-        return 1;
-    }
-
-    if(dp[n]!=0) {
-        return dp[n];
-    }
-
-    int sum=0;
-    for(int i=1;i<n; i++){
-        sum+= catalan(i-1)*catalan(n-1);
-    }
-
-    return dp[n] = sum;
-
-
+unsigned long int catalan(unsigned int n) 
+{ 
+    // Base case 
+    if (n <= 1) return 1; 
+  
+    if(dp[n]!=0) return dp[n];
+    // catalan(n) is sum of catalan(i)*catalan(n-i-1) 
+    unsigned long int res = 0; 
+    for (int i=0; i<n; i++) 
+        res += catalan(i)*catalan(n-i-1); 
+  
+    return dp[n]=res; 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    for (int i=0; i<10; i++) 
+        cout << catalan(i) << " "; 
+    return 0; 
 }
 
-int main() {
-    
-    return 0;
-}
