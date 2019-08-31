@@ -36,9 +36,7 @@ public:
                 Node* child = new Node(ch);
                 temp->h[ch] = child;
             }
-            else {
                 temp = temp->h[ch];
-            }
         }
         temp->isTerminal = true;
     }
