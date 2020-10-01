@@ -1,3 +1,8 @@
+//Jump Search algorithm
+//Time complexity:O(√n)
+//Space complexity:O(1)
+//Note: Works on only sorted arrays
+
 #include<bits/stdc++.h>
 using namespace std;
 
