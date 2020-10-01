@@ -1,10 +1,11 @@
-# Python3 program to find out maximum
+# Optimal Strategy program to find out maximum
 # value from a given sequence of coins
 
 # Returns optimal value possible that
 # a player can collect from an array
 # of coins of size n. Note than n
 # must be even
+
 def optimalStrategyOfGame(arr, n):
     # Create a table to store
     # solutions of subproblems
