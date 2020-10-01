@@ -66,7 +66,6 @@ void Graph::DFS(int v)
 	DFSUtil(v, visited); 
 } 
 
- 
 
 int main() 
 { 
@@ -81,13 +80,15 @@ int n=100,ch=1;
         cout<<"Enter 2 vertices between which you want to add edge\n";
         cin>>a>>b;
         g.addEdge(a,b);
-        cout<<"You want to add new edge press 1\n";
+        cout<<"You want to add new edge press 1 \n";
         cin>>ch;
     }
     while(ch==1);
-    
+    int dfs_node;
+    cout<<"Enter DFS starting vertex";
+    cin>>dfs_node;
     	cout << "Following is Depth First Traversal "
-		<< "(starting from vertex 2) \n"; 
-	g.DFS(n); 
+		<< "(starting from vertex "<<dfs_node<<")"<<"\n"; 
+	g.DFS(dfs_node); 
 	return 0; 
 } 
