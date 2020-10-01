@@ -1,3 +1,6 @@
+# This file contains the Quick Sort algorithm written in python.
+# Input: Array to be sorted
+# Output: Sorted array
 def quicksort(arr):
         left=[]
         right=[]
