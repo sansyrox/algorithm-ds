@@ -88,6 +88,6 @@ int n=100,ch=1;
     
     	cout << "Following is Depth First Traversal "
 		<< "(starting from vertex 2) \n"; 
-	g.DFS(2); 
+	g.DFS(n); 
 	return 0; 
 } 
