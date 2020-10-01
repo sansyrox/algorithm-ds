@@ -1,4 +1,6 @@
 # Algorithms/DS
-This repo contains some usefull Algorithms. 
+This repo contains some usefull algorithms 
 
-Consider starring this repo? :star:
+this will help you code 
+
+so contribute to this code
