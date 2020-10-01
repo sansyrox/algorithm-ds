@@ -55,7 +55,7 @@ $ git remote -v
 origin    https://github.com/sansyrox/algorithm-ds.git (fetch)
 origin    https://github.com/sansyrox/algorithm-ds.git (push)
 upstream  https://github.com/sansyrox/algorithm-ds.git (fetch)
-upstream https://github.com/sansyrox/algorithm-ds.git (push)
+upstream  https://github.com/sansyrox/algorithm-ds.git (push)
 ```
 
 ### 4. Sync it :recycle:
