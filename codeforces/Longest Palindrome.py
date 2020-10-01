@@ -1,3 +1,6 @@
+# This file contain the solution to the problem Codeforce Longest Palindrome 
+# Problem NUmber: 1304B
+# Link to the Problem: https://codeforces.com/problemset/problem/1304/B
 a=input()
 a=a.split()
 n,m=[int(i) for i in a]
