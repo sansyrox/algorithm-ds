@@ -1,3 +1,8 @@
+'''
+This file contains quick sort implementation in python
+'''
+
+
 def quicksort(nums, start, end):
     if start < end:
         mid = partition(nums, start, end)
