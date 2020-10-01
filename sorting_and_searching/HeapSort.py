@@ -1,3 +1,8 @@
+'''
+This file contains heap sort implementation in python
+'''
+
+
 def parent(i):
     return (i-1) // 2
 
