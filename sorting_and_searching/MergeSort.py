@@ -1,3 +1,8 @@
+'''
+This file contains merge sort implementation in python
+'''
+
+
 def merge_sort(nums, start, end):
     if start < end:
         mid = (start + (end-1)) // 2
