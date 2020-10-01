@@ -1,3 +1,7 @@
+'''
+This file contains counting sort implementation in python
+'''
+
 def counting_sort(nums, k):
     count_occurrences = [0] * k
     output = [0] * len(nums)
