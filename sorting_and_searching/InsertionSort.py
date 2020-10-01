@@ -1,3 +1,8 @@
+'''
+This file contains insertion sort implementation in python
+'''
+
+
 def insertion_sort(nums):
     for j in range(1, len(nums)):
         key = nums[j]
