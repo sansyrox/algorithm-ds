@@ -1,3 +1,5 @@
+/* This is a CPU scheduling algorithm. It serves the tasks to CPU on the basis of first come first serve. It is implemented using FIFO Queue. */
+
 #include <iostream>
 #include <algorithm>
 #include <stdio.h>
