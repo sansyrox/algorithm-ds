@@ -1,3 +1,8 @@
+'''
+This file contains bubble sort implementation in python
+'''
+
+
 def bubble_sort(nums):
     for i in range(len(nums)):
         for j in range(len(nums)):
