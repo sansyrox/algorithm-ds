@@ -93,9 +93,12 @@ int n=100,ch=1;
         cin>>ch;
     }
     while(ch==1);
-    
+        int bfs_node;
+    cout<<"Enter BFS starting vertex";
+    cin>>bfs_node;
     	cout << "Following is Breadth First Traversal "
-		<< "(starting from vertex 2) \n"; 
-	g.BFS(2); 
+		<< "(starting from vertex "<<bfs_node<<")"<<"\n"; 
+	g.BFS(bfs_node); 
+ 
 	return 0; 
 } 
