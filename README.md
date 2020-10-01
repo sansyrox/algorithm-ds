@@ -1,2 +1,4 @@
-# summer_of_cpp
-Daily progress of my DS/Algo Prep
+# Algorithms/DS
+This repo contains some usefull Algorithms. 
+
+Consider starring this repo? :star:
