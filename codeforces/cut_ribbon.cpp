@@ -1,3 +1,7 @@
+//This file contain solution of the below give question
+//Problem Name :  Cut Ribbon
+//Problem Number: 189A
+//Problem LInk : https://codeforces.com/problemset/problem/189/A
 #include<bits/stdc++.h>
 using namespace std;
 
