@@ -1,4 +1,4 @@
-# Optimal Strategy program to find out maximum
+# Python3 program to find out maximum
 # value from a given sequence of coins
 
 # Returns optimal value possible that
