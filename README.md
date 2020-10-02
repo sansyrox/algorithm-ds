@@ -32,5 +32,11 @@ Create a new branch and set branch name to whatever algorithm you're creating
 
 # Happy contribution :)
 
+<<<<<<< master
+=======
+
+
+>>>>>>> master
+
 
 
