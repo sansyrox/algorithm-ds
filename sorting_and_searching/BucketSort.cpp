@@ -3,6 +3,8 @@
 #include <vector> 
 using namespace std; 
 
+//Sort an array in ascending order using bucket sort.
+
 void bucketSort(float arr[], int n) 
 { 
 	vector<float> b[n]; 
