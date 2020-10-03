@@ -1,3 +1,19 @@
+""" 
+
+One important aspect of A* is f = g + h. The f, g, and h variables are in our Node class,
+and get calculated every time we create a new node.
+-> G is the distance between the current node and the start node.
+-> H is the heuristic — estimated distance from the current node to the end node.
+-> F is the total cost of the node.
+With this new f value, we can look at all our nodes and say,
+weather or not is is the bestnode it pick. Rather than running through every node,
+we can pick the ones that have the best chance of getting us to our goal.
+obviously the node with least F value is the best node
+as the estimated distance between the current node and the end node is least.😁
+
+"""
+
+
 class Node:
     """A node class for A* Pathfinding"""
 
