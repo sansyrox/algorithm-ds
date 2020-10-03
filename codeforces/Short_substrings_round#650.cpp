@@ -1,3 +1,25 @@
+/*
+The problem is a very popular one where we are dealing with 2 substrings a & b-
+
+b is built from a as follows: write all the substrings of length 2 of the string a in the order from left to right, and then join them in the same order into the string b.
+
+For example, if we come up with the string a="abac", then all the substrings of length 2 of the string a are: "ab", "ba", "ac". Therefore, the string b="abbaac".
+
+Now, what the code does? We are given the string b and we have to find the parent string a. It can work on any number of test cases t. Given below are some test cases.
+INPUT-
+4
+abbaac
+ac
+bccddaaf
+zzzzzzzzzz
+OUTPUT-
+abac
+ac
+bcdaf
+zzzzzz
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
